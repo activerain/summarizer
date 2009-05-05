@@ -1,0 +1,27 @@
+This Rails plugin adds a helper called #summarizer which reduces a html fragment to a few words of text.  This is intended for short post summaries.  Not perfect, but much better than the truncate / strip_tags methods used in the rest of the Rails world.
+
+Usage:
+
+  In a view:
+
+    <%= summarizer html %>
+
+  Input example:
+
+    "<p><i>(This has been sitting as a draft for a while, time to release it to the world.)</i></p>\r\n\r\n<p><strong>SEVEN THINGS YOU ALWAYS WANTED TO KNOW ABOUT AN ACTIVERAIN DEVELOPER BUT WERE AFRAID TO ASK</strong></p>\r\n\r\n<ol>\r\n  <li>Video game fanatic.  Just about weekly for the past 10 years, I've purchased a video game, and then grown tired of it in days.  Only a select few have retained my interest for years (like Team Fortress 2 and Dwarf Fortress.)"
+
+  Output example:
+
+    ...
+
+Installation:
+
+  Install the plugin into vendor/plugins/summarizer
+
+  In app/helpers/application_helper.rb add:
+ 
+    include SummarizerHelper
+
+
+
+    Description:	Rails plugin that adds a helper which reduces an html fragment to a few words of text. Intended for short post summaries. Not perfect, but better than the truncate / strip_tags methods used in the rest of the Rails world
